@@ -1,0 +1,5 @@
+- unless @gross_revenue.blank?
+  = "Gross revenue: $#{"%.02f" % @gross_revenue}."
+= form_tag upload_path, id: 'upload-form', multipart: true do
+  = file_field_tag :file
+  = submit_tag 'submit'
